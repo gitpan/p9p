@@ -39,6 +39,7 @@ testlist = base/*.t comp/*.t cmd/*.t io/*.t op/*.t
 
 install:V:	perl preplibrary 
 		cp perl /$objtype/bin/perl
+		cp plan9/aperl /bin/perl
 		
 perl:		config.h miniperl $archlib/Config.pm perlmain.$O $perlshr 
 		$LD $CFLAGS -o perl perlmain.$O $perllib $perlshr
